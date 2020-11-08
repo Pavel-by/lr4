@@ -1,0 +1,23 @@
+html
+    head
+        title Вход
+        link(rel="stylesheet" type="text/css" href="/public/css/uikit.min.css")
+        script(type="text/javascript" src="/public/js/lib/jquery.min.js")
+        script(type="text/javascript" src="public/js/login.min.js")
+
+    body.uk-section-muted
+        div.uk-height-viewport.uk-flex.uk-flex-middle.uk-flex-center.uk-section-muted
+            div.uk-width-1-1
+                div.uk-container-xsmall.uk-container
+                    div.uk-card.uk-card-default
+                        div.uk-card-header
+                            h3.uk-card-title.uk-heading-divider Вход
+                            form#login-form
+                                fieldset.uk-fieldset
+                                    div.uk-margin
+                                        input.uk-input(type="text" placeholder="Логин" name="login")
+                                    div.uk-margin
+                                        input.uk-input(type="password" placeholder="Пароль" name="password")
+                                    div.uk-hidden.error.uk-alert-danger.uk-margin.uk-padding-small(uk-alert="")
+                                    div.uk-margin
+                                        input.uk-button.uk-button-primary(type="submit" value="Войти")

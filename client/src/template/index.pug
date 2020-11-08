@@ -1,0 +1,25 @@
+html
+    head
+        title Аукцион
+        link(rel="stylesheet" type="text/css" href="/public/css/uikit.min.css")
+        script(type="text/javascript" src="/public/js/lib/jquery.min.js")
+        script(type="text/javascript" src="public/js/index.min.js")
+
+    body
+        div.uk-height-viewport.uk-flex.uk-flex-middle.uk-flex-center.uk-section-muted
+            div.uk-width-1-1
+                div.uk-container-xsmall.uk-container
+                    div.uk-card.uk-card-default
+                        div.uk-card-header
+                            h3.uk-card-title.uk-heading-divider Аукцион
+
+                            div#loading-section
+                                p Загрузка данных
+
+                            div#unaithorized-section.uk-hidden
+                                p Для участия в аукционе вы должны быть авторизованы
+                                a.uk-button.uk-button-primary(href="/login") Войти
+
+                            div#authorized-section.uk-hidden
+                                p Добро пожаловать, <span class="uk-text-bold user-name"></span>!
+                                a.uk-button.uk-button-primary(href="/login") Продолжить

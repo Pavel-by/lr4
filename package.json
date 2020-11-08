@@ -1,0 +1,43 @@
+{
+  "name": "edu-lr4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow:build": "flow-remove-types ./server/src -d ./server/lib/ --all --pretty"
+  },
+  "type": "module",
+  "author": "Mironchik Pavel",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "del": "^6.0.0",
+    "flow-remove-types": "^2.137.0",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.5.1",
+    "webpack": "^5.2.0",
+    "webpack-stream": "^6.1.0"
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.9",
+    "mongoose-unique-validator": "^2.0.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.1"
+  }
+}

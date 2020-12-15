@@ -74,18 +74,18 @@ class AuctionService {
         let auction = await m.Auction.findOne();
 
         this._startDate = auction.starttime;
-        if (auction.starttime <= Date.now()) {
+        /*if (auction.starttime <= Date.now()) {
             console.log("OOOOPS, auction is finished");
             this._state = AuctionState.Finished;
             this.emitAuction();
             //await this._startAuction(); TODO
-        } else {
+        } else {*/
             this._startTimerId = setTimeout(() => {
                 this._startTimerId = null;
                 this._startAuction();
             }, auction.starttime - Date.now());
             this.emitAuction();
-        }
+        //}
 
         this._server.of('/').on('connect', async (socket) => {
             socket.on('make-bid', async (bid) => {
